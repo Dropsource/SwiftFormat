@@ -12,7 +12,8 @@ keyWordType = enum.Enum(('while','for',
                  "EMPTYLINE",
                  "anyone",
                  "unknown"))
-keywordSeparators = ['"',"'",")",":",".",","," "]
+# keywordSeparators = ['"',"'",")",":",".",","," "]
+keywordSeparators = ['"',"'",")",".",","," "]
 
 class KeyWord:
     type = keyWordType.unknown
@@ -56,8 +57,8 @@ class KeyWord:
     def identifyKeyWord(self):
         if self.keywordSeparator == '"':
             self.type = keyWordType.string
-        elif self.keywordSeparator == ':':
-            self.type = keyWordType.methodArgument
+        # elif self.keywordSeparator == ':':
+        #     self.type = keyWordType.methodArgument
         elif self.keywordSeparator == ")":
             self.type = keyWordType.method
         elif self.keywordSeparator == " ":

@@ -95,7 +95,7 @@ class FileReader:
         return newString
 
     def addOrRemoveWhiteSpace(self,sourceCodeLine):
-        # se if line needs to be further split up
+        # see if line needs to be further split up
         unalteredline = copy.copy(sourceCodeLine.formattedContent)
 
         originalLine = sourceCodeLine.formattedContent.lstrip()
